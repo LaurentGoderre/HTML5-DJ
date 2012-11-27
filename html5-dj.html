@@ -29,6 +29,7 @@ wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Lice
 <noscript><link rel="stylesheet" href="wet-boew/theme-base/css/theme-ns-min.css" /></noscript>
 
 <!-- CustomScriptsCSSStart -->
+<script src="js/dj.js"></script>
 <!-- CustomScriptsCSSEnd -->
 </head>
 
@@ -60,8 +61,9 @@ wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Lice
 <div id="wb-main" role="main"><div id="wb-main-in">
 <!-- MainContentStart -->
 <h1 id="wb-cont">HTML5 DJ</h1>
+
 <div class="span-3" id="table-1"><section><h2>Turntable 1</h2>
-<div class="wet-boew-multimedia wb-mm-no-ui" id=""></div>
+<button id="table-1-play" class="table-play">Play</button>
 <section><h3><label for="table-1-volume">Volume</h3>
 <input data-fd-slider-vertical="v-s" name="table-1-volume" id="table-1-volume" type="range" min="0" max="1" step="0.01" value="1" />
 </section>
@@ -69,11 +71,11 @@ wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Lice
 
 <div class="span-2" id="mixer"><section><h2>Mixer</h2>
 <section><h3><label for="crossfade">Crossfade</label></h3>
-<input name="crossfade" id="crossfade" type="range" min="0" max="1" step="0.01" value="0.5" />
+<input name="crossfade" id="crossfade" type="range" min="-1" max="1" step="0.005" value="0" />
 </section></div>
 
 <div class="span-3" id="table-2"><section><h2>Turntable 2</h2>
-<div class="wet-boew-multimedia wb-mm-no-ui" id=""></div>
+<button id="table-2-play" class="table-play">Play</button>
 <section><h3><label for="table-2-volume">Volume</h3>
 <input data-fd-slider-vertical="v-s" name="table-2-volume" id="table-2-volume" type="range" min="0" max="1" step="0.01" value="1" />
 </section>

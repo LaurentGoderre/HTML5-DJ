@@ -1,0 +1,55 @@
+var table1 = {
+		volume: 1,
+		playRate: 1,
+		audio: null,
+		ui: null
+	},
+	table2 = {
+		volume: 1,
+		playRate: 1,
+		audio: null,
+		ui: null
+	},
+	mixer = {
+		get_crossfade_volume: function(value, volume_table1, volulme_table2){
+			var t1,t2;
+
+			t1 = volume_table1 * ((value < 0) ? 1 : 1 - value);
+			t2 = volulme_table2 * ((value > 0) ? 1 : 1 - Math.abs(value));
+
+			return [t1,t2];
+		}
+	}
+
+$(document).ready(function(){
+	table1.ui = $('#table-1');
+	table2.ui = $('#table-2');
+	
+	table1.audio = new Audio('1.ogg');
+	table2.audio = new Audio('1.ogg');
+	
+	$('#crossfade').on('change', function(){
+		var v = mixer.get_crossfade_volume(this.value, table1.volume, table2.volume);
+		table1.audio.volume = v[0];
+		table2.audio.volume = v[1];
+	})
+	
+	$('.table-play').on('click', function(){
+		switch (this.id) {
+			case 'table-1-play':
+				if (table1.audio.paused === true) {
+					table1.audio.play();
+				} else {
+					table1.audio.pause();
+				}
+				break;
+			case 'table-2-play':
+				if (table2.audio.paused === true) {
+					table2.audio.play();
+				} else {
+					table2.audio.pause();
+				}
+				break;
+		}
+	});
+});
