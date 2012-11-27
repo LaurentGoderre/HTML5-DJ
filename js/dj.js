@@ -1,15 +1,11 @@
-var table1 = {
+var table_default = {
 		volume: 1,
 		playRate: 1,
 		audio: null,
 		ui: null
 	},
-	table2 = {
-		volume: 1,
-		playRate: 1,
-		audio: null,
-		ui: null
-	},
+	table1 = $.extend({}, table_default),
+	table2 = $.extend({}, table_default),
 	mixer = {
 		get_crossfade_volume: function(value, volume_table1, volulme_table2){
 			var t1,t2;
