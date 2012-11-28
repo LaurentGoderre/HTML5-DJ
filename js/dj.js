@@ -1,6 +1,6 @@
 var table_default = {
 		volume: 1,
-		playRate: 1,
+		tempo: 1,
 		audio: null,
 		ui: null
 	},
@@ -22,7 +22,7 @@ $(document).ready(function(){
 	table2.ui = $('#table-2');
 	
 	table1.audio = new Audio('1.ogg');
-	table2.audio = new Audio('1.ogg');
+	table2.audio = new Audio('2.ogg');
 	
 	$('#crossfade').on('change', function(){
 		var v = mixer.get_crossfade_volume(this.value, table1.volume, table2.volume);
@@ -32,19 +32,32 @@ $(document).ready(function(){
 	
 	$('.table-play').on('click', function(){
 		switch (this.id) {
-			case 'table-1-play':
+			case 'table1-play':
 				if (table1.audio.paused === true) {
 					table1.audio.play();
 				} else {
 					table1.audio.pause();
 				}
 				break;
-			case 'table-2-play':
+			case 'table2-play':
 				if (table2.audio.paused === true) {
 					table2.audio.play();
 				} else {
 					table2.audio.pause();
 				}
+				break;
+		}
+	});
+	
+	$('.table-tempo').on('change', function(){console.log(this.value);
+		switch (this.id) {
+			case 'table1-tempo':
+				table1.tempo = this.value;
+				table1.audio.playbackRate = table1.tempo;
+				break;
+			case 'table-2-tempo':
+				table2.tempo = this.value;
+				table2.audio.playbackRate = table2.tempo;
 				break;
 		}
 	});
