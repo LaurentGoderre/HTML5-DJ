@@ -55,7 +55,7 @@ $(document).ready(function(){
 				table1.tempo = this.value;
 				table1.audio.playbackRate = table1.tempo;
 				break;
-			case 'table-2-tempo':
+			case 'table2-tempo':
 				table2.tempo = this.value;
 				table2.audio.playbackRate = table2.tempo;
 				break;
