@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="43.246429" height="62.332901" id="tempo_slider">
+  <defs id="slide_def">
+    <linearGradient id="linearGradient4853">
+      <stop id="stop4855" style="stop-color:#565656;stop-opacity:1" offset="0" />
+      <stop id="stop4861" style="stop-color:#606060;stop-opacity:1" offset="0.84931505" />
+      <stop id="stop4857" style="stop-color:#9f9f9f;stop-opacity:1" offset="1" />
+    </linearGradient>
+    <linearGradient id="linearGradient4281">
+      <stop id="stop4283" style="stop-color:#606060;stop-opacity:1" offset="0" />
+      <stop id="stop4315" style="stop-color:#8b8b8b;stop-opacity:1" offset="0.18974139" />
+      <stop id="stop4313" style="stop-color:#515151;stop-opacity:1" offset="0.34312513" />
+      <stop id="stop4311" style="stop-color:#666666;stop-opacity:1" offset="0.41356799" />
+      <stop id="stop4309" style="stop-color:#7f7f7f;stop-opacity:1" offset="0.68170547" />
+      <stop id="stop4289" style="stop-color:#c6c6c6;stop-opacity:1" offset="0.76350993" />
+      <stop id="stop4307" style="stop-color:#7f7f7f;stop-opacity:1" offset="0.87266552" />
+      <stop id="stop4285" style="stop-color:#4d4d4d;stop-opacity:1" offset="1" />
+    </linearGradient>
+    <linearGradient x1="335.22726" y1="798.95306" x2="335.22726" y2="736.44275" id="linearGradient4287" xlink:href="#linearGradient4281" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.52978863,0,0,1,147.17268,0)" />
+    <linearGradient x1="341.95151" y1="780.19788" x2="341.95148" y2="757.47058" id="linearGradient4859" xlink:href="#linearGradient4853" gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g transform="translate(-303.70032,-737.42385)" id="tempo_shape">
+    <rect width="34.38575" height="61.845009" x="308.10037" y="737.91174" style="fill:url(#linearGradient4287);fill-opacity:1;stroke:#4d4d4d" />
+    <rect width="33.255932" height="22.727272" x="308.69556" y="757.47058" style="fill:#4d4d4d;fill-opacity:1;stroke:url(#linearGradient4859)" />
+    <rect width="32.10001" height="4.0772042" x="309.30133" y="766.79559" style="fill:#ffffff;fill-opacity:1;stroke:none" />
+  </g>
+</svg>
