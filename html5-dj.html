@@ -29,6 +29,7 @@ wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Lice
 <noscript><link rel="stylesheet" href="wet-boew/theme-base/css/theme-ns-min.css" /></noscript>
 
 <!-- CustomScriptsCSSStart -->
+<link rel="stylesheet" href="css/dj.css" />
 <script src="js/dj.js"></script>
 <!-- CustomScriptsCSSEnd -->
 </head>
@@ -64,8 +65,13 @@ wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Lice
 
 <div class="span-3" id="table-1"><section><h2>Turntable 1</h2>
 <button id="table1-play" class="table-play">Play</button>
+<svg id="jog1" class="jog" width="50%" viewbox="0 0 393 387" preserveAspectRatio="xMidYMid meet">
+	<image x="0" y="0" width="100%" height="100%" xlink:href="images/jog.svg" />
+</svg>
 <section><h3><label for="table1-tempo">Tempo</h3>
+<div class="tempo-container">
 <input data-fd-slider-vertical="v-s" name="table1-tempo" id="table1-tempo" class="table-tempo" type="range" min="0.92" max="1.08" step="0.001" value="1" />
+</div>
 </section>
 </section></div>
 
@@ -76,8 +82,13 @@ wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Lice
 
 <div class="span-3" id="table-2"><section><h2>Turntable 2</h2>
 <button id="table2-play" class="table-play">Play</button>
+<svg id="jog2" class="jog" width="50%" viewbox="0 0 393 387" preserveAspectRatio="xMidYMid meet">
+	<image x="0" y="0" width="393" height="387" xlink:href="images/jog.svg" />
+</svg>
 <section><h3><label for="table2-tempo">Tempo</h3>
+<div class="tempo-container">
 <input data-fd-slider-vertical="v-s" name="table2-tempo" id="table2-tempo" class="table-tempo"  type="range" min="0.92" max="1.08" step="0.001" value="1" />
+</div>
 </section>
 </section></div>
 <!-- MainContentEnd -->
