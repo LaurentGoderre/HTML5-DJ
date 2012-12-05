@@ -1,9 +1,30 @@
+.table, #mixer {
+	background: #808186;
+	background: -moz-linear-gradient(-45deg, #808186 0%, #1f1f21 47%, #1f1f21 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#808186), color-stop(47%,#1f1f21), color-stop(100%,#1f1f21)); 
+	background: -webkit-linear-gradient(-45deg, #808186 0%,#1f1f21 47%,#1f1f21 100%);
+	background: -o-linear-gradient(-45deg, #808186 0%,#1f1f21 47%,#1f1f21 100%); 
+	background: -ms-linear-gradient(-45deg, #808186 0%,#1f1f21 47%,#1f1f21 100%); 
+	background: linear-gradient(135deg, #808186 0%,#1f1f21 47%,#1f1f21 100%);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border:5px solid #eee;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	padding:1em;
+}
+
+h2, h3 {
+	color:#FFF;
+}
+
+
 .jog {
 	float:left;
 	width:80%;
-	-moz-user-select: none;
-	-webkit-user-drag: none;
-	user-drag: none;
+	
 }
 
 .tempo-container{
