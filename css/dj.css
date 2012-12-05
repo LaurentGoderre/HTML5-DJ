@@ -1,6 +1,9 @@
 .jog {
 	float:left;
 	width:80%;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
 }
 
 .tempo-container{
