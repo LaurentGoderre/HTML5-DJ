@@ -9,8 +9,8 @@ var table_default = {
 	mixer = {
 		crossfade:0,
 		update_volumes: function () {
-			table1.audio.volume = table1.volume * ((mixer.crossfade < 0) ? 1 : 1 - mixer.crossfade);
-			table2.audio.volume = table2.volume * ((mixer.crossfade > 0) ? 1 : 1 - Math.abs(mixer.crossfade));
+			table1.audio.volume = table1.volume * ((this.crossfade < 0) ? 1 : 1 - this.crossfade);
+			table2.audio.volume = table2.volume * ((this.crossfade > 0) ? 1 : 1 - this.Math.abs(crossfade));
 		}
 	}
 
@@ -18,63 +18,43 @@ $(document).ready(function () {
 	table1.ui = $('#table-1');
 	table2.ui = $('#table-2');
 	
+	get_table = function (id) {console.log(id.substr(0,6));
+		switch (id.substr(0,6)){
+			case 'table1':
+				return table1;
+			case 'table2':
+				return table2;
+		}
+	}
+	
 	$('#crossfade').on('change', function () {
 		mixer.crossfade = this.value;
 		mixer.update_volumes();
 	})
 	
 	$('.table-file').on('change', function () {
-		switch (this.id){
-			case 'table1-file':
-				table1.audio = new Audio(this.value);
-				break;
-			case 'table2-file':
-				table2.audio = new Audio(this.value);
-				break;
-		}
+		var table = get_table(this.id);
+		table.audio = new Audio(this.value);
 	});
 	
 	$('.table-play').on('click', function () {
-		switch (this.id) {
-			case 'table1-play':
-				if (table1.audio.paused === true) {
-					table1.audio.play();
-				} else {
-					table1.audio.pause();
-				}
-				break;
-			case 'table2-play':
-				if (table2.audio.paused === true) {
-					table2.audio.play();
-				} else {
-					table2.audio.pause();
-				}
-				break;
+		var table = get_table(this.id);
+		if (table.audio.paused === true) {
+			table.audio.play();
+		} else {
+			table.audio.pause();
 		}
 	});
 	
 	$('.table-tempo').on('change', function () {
-		switch (this.id) {
-			case 'table1-tempo':
-				table1.tempo = this.value;
-				table1.audio.playbackRate = table1.tempo;
-				break;
-			case 'table2-tempo':
-				table2.tempo = this.value;
-				table2.audio.playbackRate = table2.tempo;
-				break;
-		}
+		var table = get_table(this.id);
+		table.tempo = this.value;
+		table.audio.playbackRate = table.tempo;
 	});
 	
 	$('.table-volume').on('change', function () {
-		switch (this.id) {
-			case 'table1-volume':
-				table1.volume = this.value;
-				break;
-			case 'table2-volume':
-				table2.volume = this.value;
-				break;
-		}
+		var table = get_table(this.id);
+		table.volume = this.value;
 		mixer.update_volumes();
 	});
 });
