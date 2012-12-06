@@ -18,13 +18,21 @@ $(document).ready(function () {
 	table1.ui = $('#table-1');
 	table2.ui = $('#table-2');
 	
-	table1.audio = new Audio('1.ogg');
-	table2.audio = new Audio('2.ogg');
-	
 	$('#crossfade').on('change', function () {
 		mixer.crossfade = this.value;
 		mixer.update_volumes();
 	})
+	
+	$('.table-file').on('change', function () {
+		switch (this.id){
+			case 'table1-file':
+				table1.audio = new Audio(this.value);
+				break;
+			case 'table2-file':
+				table2.audio = new Audio(this.value);
+				break;
+		}
+	});
 	
 	$('.table-play').on('click', function () {
 		switch (this.id) {
