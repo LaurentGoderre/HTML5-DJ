@@ -14,6 +14,7 @@
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	padding:1em;
+	color:#FFF;
 }
 
 h2, h3 {
@@ -30,4 +31,8 @@ h2, h3 {
 .tempo-container{
 	width:10%;
 	float:right
+}
+
+.mixer-volume-container {
+	width:50%;
 }
