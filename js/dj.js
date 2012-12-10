@@ -13,6 +13,8 @@ var table_default = {
 			table2.audio.volume = table2.volume * ((this.crossfade > 0) ? 1 : 1 - this.Math.abs(crossfade));
 		}
 	}
+	
+window.URL = window.URL || window.webkitURL;
 
 $(document).ready(function () {
 	table1.ui = $('#table-1');
@@ -33,8 +35,9 @@ $(document).ready(function () {
 	})
 	
 	$('.table-file').on('change', function () {
-		var table = get_table(this.id);
-		table.audio = new Audio(this.value);
+		var table = get_table(this.id), 
+			url = window.URL.createObjectURL(this.files[0]);
+		table.audio = new Audio(url);
 	});
 	
 	$('.table-play').on('click', function () {
